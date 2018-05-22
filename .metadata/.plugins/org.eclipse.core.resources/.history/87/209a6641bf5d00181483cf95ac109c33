@@ -1,0 +1,52 @@
+package com.bridgeit.demo;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServlet;
+
+
+
+public class FirstServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public FirstServlet() {
+        
+       System.out.println("this is where servlet object get created");
+    }
+    public void init(ServletConfig config)
+    {
+    	System.out.println("Object is initialzed");
+    }
+    
+    public void doGet(ServletRequest request,ServletResponse response) throws IOException
+    {
+    	PrintWriter out=response.getWriter();
+    	@SuppressWarnings("resource")
+		Scanner scanner=new Scanner(System.in);
+    	System.out.println("enter name");
+    	String name=scanner.next();
+    	
+    	String takeName=request.getParameter(name);
+    	out.println(takeName);
+    	
+    	out.println("<html> <body bg color='yellow'><h1>" +takeName+ "</h1> </body> </html>");
+    	out.flush();
+    	out.close();
+    }
+    	
+    	public void destroy()
+    	{
+    		System.out.println("close all resoureces");
+    	}
+    
+}
+
+	
+

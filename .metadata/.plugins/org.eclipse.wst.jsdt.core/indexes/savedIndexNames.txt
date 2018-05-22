@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/home/bridgeit/Desktop/JSP and Servlet/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1886055642.index
+3872964395.index
+2300882807.index
+3050945565.index
+3659476848.index
+1228408038.index
