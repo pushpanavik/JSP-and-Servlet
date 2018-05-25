@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="/home/bridgeit/Desktop/JSP and Servlet/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/home/bridgeit/Desktop/JSP and Servlet/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/DynamicWebApp" path="/DynamicWebApp" reloadable="true" source="org.eclipse.jst.jee.server:DynamicWebApp"/></Host>
+      <Context docBase="/home/bridgeit/Desktop/JSP and Servlet/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/home/bridgeit/Desktop/JSP and Servlet/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/DynamicWebApp" path="/DynamicWebApp" reloadable="true" source="org.eclipse.jst.jee.server:DynamicWebApp"/><Context docBase="/home/bridgeit/Desktop/JSP and Servlet/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/FilterDemo" path="/FilterDemo" reloadable="true" source="org.eclipse.jst.jee.server:FilterDemo"/></Host>
     </Engine>
   </Service>
 </Server>

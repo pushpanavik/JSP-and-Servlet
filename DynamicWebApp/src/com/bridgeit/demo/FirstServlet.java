@@ -29,6 +29,7 @@ public class FirstServlet extends HttpServlet {
     {
     	PrintWriter out=response.getWriter();
     
+    	out.println("service method is called");
     	RequestDispatcher requestDispatcher=request.getRequestDispatcher("/ConfigExample");
     	requestDispatcher.include(request, response);
     	out.flush();

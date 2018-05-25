@@ -2,8 +2,19 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>DynamicWebApp</display-name>
   <welcome-file-list>
+  	 <welcome-file>index.html</welcome-file>
     <welcome-file>Login.jsp</welcome-file>
+    <welcome-file>User.jsp</welcome-file>
+    <welcome-file>Product.html</welcome-file>
   </welcome-file-list>
+  <context-param>
+    <param-name>ofp</param-name>
+    <param-value>40</param-value>
+  </context-param>
+  <context-param>
+    <param-name>ofm</param-name>
+    <param-value>New Year Sale</param-value>
+  </context-param>
   <servlet>
     <servlet-name>LoginController</servlet-name>
     <servlet-class>com.bridgeit.controller.LoginController</servlet-class>
@@ -20,6 +31,36 @@
     <servlet-name>FirstServlet</servlet-name>
     <url-pattern>/FirstServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>ConfigExample</servlet-name>
+    <servlet-class>com.bridgeit.demo.ConfigExample</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConfigExample</servlet-name>
+    <url-pattern>/ConfigExample</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CookieExample</servlet-name>
+    <servlet-class>com.bridgeit.controller.CookieExample</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CookieExample</servlet-name>
+    <url-pattern>/cookie</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SecondServlet</servlet-name>
+    <servlet-class>com.bridgeit.controller.SecondServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SecondServlet</servlet-name>
+    <url-pattern>/SecondServlet</url-pattern>
+  </servlet-mapping>
   
- 
+  <filter>
+  <filter-name>FilterDemo</filter-name>
+  <filter-class>com.bridgeit.filterservlet.FilterDemo</filter-class>
+  </filter>
+  <filter-mapping>
+  <filter-name>FilterDemo</filter-name>
+  <url-pattern>/FilterDemo</url-pattern></filter-mapping>
 </web-app>

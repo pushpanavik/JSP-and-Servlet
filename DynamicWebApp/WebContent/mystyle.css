@@ -1,0 +1,38 @@
+@charset "UTF-8";
+div{
+	
+    margin: 75px 100px 200px 150px;
+    background-color: lightblue;
+    border: 100px solid black;
+    float: left;
+    align-content: center;
+    align-items: center;
+}
+
+
+<style>
+formValidation{
+margin-left: 70px;
+    font-weight: bold ;
+    float: left;
+    clear: left;
+    width: 100px;
+    text-align: left;
+    margin-right: 10px;
+    font-family:sans-serif,bold, Arial, Helvetica;
+    font-size:14px;
+}
+  
+div { 
+    box-sizing: border-box;
+    width: 100%;
+    border: 100px solid black;
+    float: left;
+    align-content: center;
+    align-items: center;
+}
+  
+form {                                        
+    margin: 0 auto;
+    width: 600px;
+}</style>

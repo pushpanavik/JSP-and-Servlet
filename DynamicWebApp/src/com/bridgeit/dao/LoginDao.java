@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import com.bridgeit.model.LoginPojo;
 
 public class LoginDao {
-public static boolean validateUser(LoginPojo log)  {
+public static boolean validateUser(LoginPojo log) throws SQLException  {
 		
 		boolean status=false;
 		Connection con=JdbcConnection.establishConnection();
@@ -23,10 +23,14 @@ public static boolean validateUser(LoginPojo log)  {
 
 		ResultSet resultSet = preparedStatement.executeQuery();
 		status=resultSet.next();
+		preparedStatement.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		con.close();
 		return status;
+		
 	}
+		
 }

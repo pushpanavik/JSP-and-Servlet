@@ -40,23 +40,27 @@ public class LoginController extends HttpServlet {
 		log.setEmail(Email);
 		log.setPassword(Password);
 		
-		
-
-			boolean flag=LoginDao.validateUser(log);
-			System.out.println(flag);
-			if(flag)
-			{
-				ServletContext context=getServletContext();
-				RequestDispatcher requestDispatcher=context.getRequestDispatcher("/FirstServlet");
-				requestDispatcher.forward(request, response);
+			boolean flag;
+			try {
+				flag = LoginDao.validateUser(log);
+				if(flag)
+				{
+					ServletContext context=getServletContext();
+					RequestDispatcher requestDispatcher=context.getRequestDispatcher("/FirstServlet");
+					requestDispatcher.forward(request, response);
+				}
+				else
+				{
+					
+					System.out.println("authentication failed try again");
+				RequestDispatcher requestDispatcher=request.getRequestDispatcher("error.html");
+					requestDispatcher.forward(request,response);
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-			else
-			{
-				
-				System.out.println("authentication failed try again");
-			RequestDispatcher requestDispatcher=request.getRequestDispatcher("error.html");
-				requestDispatcher.include(request,response);
-			}
+			
 		
 	}
 	
